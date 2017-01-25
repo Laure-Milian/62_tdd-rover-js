@@ -64,3 +64,23 @@ test('The rover moves backward one time', function() {
 	expect(instance.y).toBe(0);
 	expect(instance.direction).toBe('E');
 });
+
+test('The rover does many things', function() {
+	const instance = app();
+	instance.right();
+	expect(instance.direction).toBe('S');
+	instance.forward();
+	instance.backward();
+	instance.right();
+	instance.forward();
+	instance.backward();
+	instance.right();
+	instance.forward();
+	instance.backward();
+	instance.right();
+	instance.forward();
+	instance.backward();
+	expect(instance.x).toBe(0);
+	expect(instance.y).toBe(0);
+	expect(instance.direction).toBe('E');
+})
