@@ -1,0 +1,26 @@
+{
+  "name": "62_td-rover-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+     "watch:test": "nodemon -w __tests__ -w ./src -e js,jsx -x npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laure-Milian/62_tdd-rover-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laure-Milian/62_tdd-rover-js/issues"
+  },
+  "homepage": "https://github.com/Laure-Milian/62_tdd-rover-js#readme",
+  "dependencies": {
+    "jest": "^18.1.0"
+  },
+  "devDependencies": {
+    "jest": "^18.1.0"
+  }
+}
