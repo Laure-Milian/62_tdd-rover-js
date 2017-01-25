@@ -5,14 +5,34 @@
 
 const app = require('../index');
 
-test('position x of rover must be 50', function() {
-	expect(app().x).toBe(50);
+test('The initial position of the rover should be x = 50 and y = 100', function() {
+	const instance = app();
+	expect(instance.x).toBe(0);
+	expect(instance.y).toBe(0);
+	expect(instance.direction).toBe('E');
 });
 
-test('position y of rover must be 100', function() {
-	expect(app().y).toBe(100);
+test('The rover moves forward one time', function() {
+	const instance = app();
+	instance.forward();
+	expect(instance.x).toBe(1);
+	expect(instance.y).toBe(0);
+	expect(instance.direction).toBe('E');
 });
 
-test('direction of rover must be W', function() {
-	expect(app().direction).toBe('W');
+test('The rover moves forward two times', function() {
+	const instance = app();
+	instance.forward();
+	instance.forward();
+	expect(instance.x).toBe(2);
+	expect(instance.y).toBe(0);
+	expect(instance.direction).toBe('E');
+})
+
+test('The rover turn right one time', function() {
+	const instance = app();
+	instance.right();
+	expect(instance.x).toBe(0);
+	expect(instance.y).toBe(0);
+	expect(instance.direction).toBe('S');
 });
